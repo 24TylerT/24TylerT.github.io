@@ -35,6 +35,7 @@ class Scout(db.Model, UserMixin):
 
     dock_park = db.Column(db.String(20))
     win = db.Column(db.String(20))
+    role = db.Column(db.String(20))
     sus_bonus = db.Column(db.String(20))
     coop_bonus = db.Column(db.String(20))
     act_bonus = db.Column(db.String(20))

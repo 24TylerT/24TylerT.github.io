@@ -92,6 +92,7 @@ def attempt():
         
         # Results
         win = request.form.get('win')
+        role = request.form.get('role')
         sus_bonus = request.form.get('sus_bonus')
         coop_bonus = request.form.get('coop_bonus')
         act_bonus = request.form.get('act_bonus')
@@ -101,7 +102,7 @@ def attempt():
         new_scout = Scout(team=team, round=round, alliance=alliance, starting_pos=starting_pos, auton_low_in=auton_low_in, auton_low_missed=auton_low_missed,auton_low_unreliable=auton_low_unreliable,
                           auton_mid_in=auton_mid_in, auton_mid_missed=auton_mid_missed,auton_mid_unreliable=auton_mid_unreliable, auton_top_in=auton_top_in, auton_top_missed=auton_top_missed, auton_top_unreliable=auton_top_unreliable, auton_community=auton_community, auton_dock_park=auton_dock_park,
                           tele_low_in=tele_low_in, tele_low_missed=tele_low_missed, tele_low_unreliable=tele_low_unreliable, tele_mid_in=tele_mid_in, tele_mid_missed=tele_mid_missed, tele_mid_unreliable=tele_mid_unreliable, 
-                          tele_high_in=tele_high_in, tele_high_missed=tele_high_missed, tele_high_unreliable=tele_high_unreliable, tele_link=tele_link, tele_unreliable_link=tele_link_unreliable, dock_park=dock_park, win=win, sus_bonus=sus_bonus, coop_bonus=coop_bonus, act_bonus=act_bonus, notes=notes)
+                          tele_high_in=tele_high_in, tele_high_missed=tele_high_missed, tele_high_unreliable=tele_high_unreliable, tele_link=tele_link, tele_unreliable_link=tele_link_unreliable, dock_park=dock_park, win=win, role=role, sus_bonus=sus_bonus, coop_bonus=coop_bonus, act_bonus=act_bonus, notes=notes)
 
         try:
             db.session.add(new_scout)
@@ -125,7 +126,7 @@ def attempt():
 
             # Database data
             data = db.session.query(Scout.team, Scout.round, Scout.alliance, Scout.starting_pos, Scout.auton_low_in, Scout.auton_low_missed, Scout.auton_low_unreliable, Scout.auton_mid_in, Scout.auton_mid_missed, Scout.auton_mid_unreliable,
-                                    Scout.auton_high_in, Scout.auton_high_missed, Scout.auton_high_unreliable, Scout.auton_community, Scout.auton_dock_park, Scout.tele_low_in, Scout.tele_low_missed, Scout.tele_low_unreliable, Scout.tele_mid_in, Scout.tele_mid_missed, Scout.tele_mid_unreliable, Scout.tele_high_in, Scout.tele_high_missed, Scout.tele_high_unreliable, Scout.tele_link, Scout.tele_link_unreliable, Scout.dock_park, Scout.sus_bonus, Scout.coop_bonus, Scout.act_bonus, Scout.notes)
+                                    Scout.auton_high_in, Scout.auton_high_missed, Scout.auton_high_unreliable, Scout.auton_community, Scout.auton_dock_park, Scout.tele_low_in, Scout.tele_low_missed, Scout.tele_low_unreliable, Scout.tele_mid_in, Scout.tele_mid_missed, Scout.tele_mid_unreliable, Scout.tele_high_in, Scout.tele_high_missed, Scout.tele_high_unreliable, Scout.tele_link, Scout.tele_link_unreliable, Scout.dock_park, Scout.win, Scout.role, Scout.sus_bonus, Scout.coop_bonus, Scout.act_bonus, Scout.notes)
 
             for i in data:
                 csv_out.writerow(i)

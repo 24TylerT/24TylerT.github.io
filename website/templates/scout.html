@@ -107,7 +107,7 @@
             <!--Unreliable-->
             <div class="row justify-content-center big-word"> 
                 <div class="col d-flex justify-content-center form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="auton_unreliable_upper" name="auton_unreliable_low" value="Unreliable">
+                    <input class="form-check-input" type="checkbox" id="auton_unreliable_low" name="auton_unreliable_low" value="Unreliable">
                     <label class="form-check-label" for="unreliable_low">Unreliable</label>
                 </div>
             </div>
@@ -496,7 +496,7 @@
 
             <!--Select Dock/Park status-->
             <div class="col col-xl-6 my-2 mx-auto justify-content-center big-word form-group">
-                <select class="form-control text-center" id="dock_park" name="dock_park">
+                <select class="form-control text-center" id="0" name="dock_park">
                     <option>Dock Engaged 2</option>
                     <option>Dock Engaged 1</option>
                     <option>Dock Attempted 2</option>
@@ -522,6 +522,16 @@
                     <option>Tie</option>
                 </select>
             </div>
+            
+            <!-- Defense/Offense -->
+            <div class="col col-xl-6 my-2 mx-auto justify-content-center big-word form-group">
+                <select class="form-control text-center" id="role" name="role">
+                    <option>Defense</option>
+                    <option>Offense</option>
+                    <option>Both</option>
+                </select>
+            </div>
+
             <div class="row justify-content-center big-word"> 
                 <div class="col d-flex justify-content-center col-sm-12 col-md-6 col-lg-6 col-xl-6 form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="sus_bonus" name="sus_bonus" value="Yes">
