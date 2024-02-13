@@ -25,43 +25,37 @@
 
 					<th>Auton</th>
 					<th class="border">Starting_Pos</th>
-					<th class="border">Low_In</th>
-					<th class="border">Low_Missed</th>
-					<th class="border">Low_Unreliable</th>
-					<th class="border">Middle_In</th>
-					<th class="border">Middle_Missed</th>
-					<th class="border">Middle_Unreliable</th>
-					<th class="border">Top_In</th>
-					<th class="border">Top_Missed</th>
-					<th class="border">Top_Unreliable</th>
-					<th class="border">Leave_Community</th>
-					<th class="border">Dock</th>
+					<th class="border">Amp</th>
+					<th class="border">Speaker</th>
+					<th class="border">Community</th>
 
           			<th>&emsp;&emsp;</th>
 
 					<th>Teleop</th>
-					<th class="border">Low_In</th>
-					<th class="border">Low_Missed</th>
-					<th class="border">Low_Unreliable</th>
-					<th class="border">Middle_In</th>
-					<th class="border">Middle_Missed</th>
-					<th class="border">Middle_Unreliable</th>
-					<th class="border">Top_In</th>
-					<th class="border">Top_Missed</th>
-					<th class="border">Top_Unreliable</th>
-					<th class="border">Link</th>
-					<th class="border">Dock/Park</th>
+					<th class="border">Amp</th>
+					<th class="border">Speaker</th>
+					<th class="border">Melody</th>
+					<th class="border">Amplified</th>
 
           			<th>&emsp;&emsp;</th>
 
 					<th>Results</th>
-					<th class="border">Win/Lose/Tie</th>
-					<th class="border">Role</th>
-					<th class="border">Sustainability_Bonus</th>
-					<th class="border">Coopertition_Bonus</th>
-					<th class="border">Activation_Bonus</th>
+          <th class="border">Coopertition</th>
+          <th class="border">Stage</th>
+          <th class="border">Spotlight</th>
+          <th class="border">Harmonize</th>
+          <!--<th class="border">Win/Lose/Tie</th>
+          <th class="border">Total_RP</th>-->
+        
+					     <th>&emsp;&emsp;</th>
 
-					<th>&emsp;&emsp;</th>
+					<th>Overall</th>
+          <th class="border">Role</th>
+          <th class="border">Game_Piece</th>
+      
+          <th class="border">Tier</th>
+
+					     <th>&emsp;&emsp;</th>
 
 					<th>Add. Notes</th>
 					<th class="border">Notes</th>
@@ -77,55 +71,49 @@
          			<td></td>
 					<td>--></td>
 					<td class="border">{{ datum.starting_pos }}</td>
-					<td class="border">{{ datum.auton_low_in }}</td>
-					<td class="border">{{ datum.auton_low_missed }}</td>
-					<td class="border">{{ datum.auton_unreliable_low }}</td>
-					<td class="border">{{ datum.auton_mid_in }}</td>
-					<td class="border">{{ datum.auton_mid_missed }}</td>
-					<td class="border">{{ datum.auton_unreliable_mid }}</td>
-					<td class="border">{{ datum.auton_high_in }}</td>
-					<td class="border">{{ datum.auton_high_missed }}</td>
-					<td class="border">{{ datum.auton_unreliable_high }}</td>
+					
+          <td class="border">{{ datum.auton_amp }}</td>
+					<td class="border">{{ datum.auton_speaker }}</td>
+          
 					<td class="border">{{ datum.auton_community }}</td>
-					<td class="border">{{ datum.auton_dock_park }}</td>
 
           			<td></td>
 					<td>--></td>
-					<td class="border">{{ datum.tele_low_in }}</td>
-					<td class="border">{{ datum.tele_low_missed }}</td>
-					<td class="border">{{ datum.tele_unreliable_low }}</td>
-					<td class="border">{{ datum.tele_mid_in }}</td>
-					<td class="border">{{ datum.tele_mid_missed }}</td>
-					<td class="border">{{ datum.tele_unreliable_mid }}</td>
-					<td class="border">{{ datum.tele_high_in }}</td>
-					<td class="border">{{ datum.tele_high_missed }}</td>
-					<td class="border">{{ datum.tele_unreliable_high }}</td>
-					<td class="border">{{ datum.tele_link }}</td>
-					<td class="border">{{ datum.tele_unreliable_link }}</td>
-					<td class="border">{{ datum.dock_park }}</td>
+					<td class="border">{{ datum.tele_amp }}</td>
+          <td class="border">{{ datum.tele_speaker }}</td>
+          <td class="border">{{ datum.tele_melody }}</td>
+          <td class="border">{{ datum.amplified }}</td>
 
         			<td></td>
-					<td>{{ datum.win }}</td>
-					<td>{{ datum.role }}</td>
-					<td class="border">{{ datum.sus_bonus }}</td>
-					<td class="border">{{ datum.coop_bonus }}</td>
-					<td class="border">{{ datum.act_bonus }}</td>
-
+          <td>--></td>
+					<td class="border">{{ datum.coopertition }}</td>
+          <td class="border">{{ datum.stage }}</td>
+          <td class="border">{{ datum.spotlight }}</td>
+          <td class="border">{{ datum.harmonize}}</td>
+          <td></td>
+					   
+          <td>--></td>
+          
+					<td class="border">{{ datum.role }}</td>
+          <td class="border">{{ datum.game_piece }}</td>
+          
+          <td class="border">{{ datum.tier }}</td>
+          
 					<td></td>
 					<td>--></td>
 					<td class="border">{{ datum.notes }}</td>
 
-         			<td>
+         	<td>
 						<button type="delete" class="btn btn-light">
 							<a href="{{ url_for('auth.delete', id=datum.id) }}">Delete</a>
 						</button>
 					</td>
-
 				</tr>
-				{% endfor %}
+        {% endfor %}
 			</table>
 		</div>
 	</div>
+ <img src='my_plot.png'/>
 </div>
 
 {% endblock %}

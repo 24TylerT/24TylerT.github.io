@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+.<!DOCTYPE html>
 <html> 
     <head>
         <meta charset ="utf-8" />
@@ -70,6 +70,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/download">Download</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/program">Offline Program</a>
                         </li>
                     </ul>
                 </div>
@@ -146,6 +149,26 @@
         }
         .form-check-input {
             margin-top: 0px;
+        }
+        .sticky {
+          position: sticky;
+          top:0;
+          border-style: solid;
+          border-color: #e81a8b;
+          background: #2e2e2e;
+          background-color: #e81a8b;
+          width: 100%;
+          z-index: 10000;
+        }
+
+        .column{
+          float: left;
+          width: 100%;
+        }
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
         }
         .taxi-check{
             padding-top: 3px;
@@ -231,6 +254,13 @@
         @keyframes fadeIn {
             from {opacity: 0;}
             to {opacity:1 ;}
+        }
+
+        /* Responsive layout for columns */
+        @media screen and (max-width: 600px) {
+          .column {
+            width: 100%;
+          }
         }
     </style>
     <script>
