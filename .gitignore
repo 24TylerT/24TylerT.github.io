@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# replit stuff
+.replit
+.replitignore
+
+# Ignore local development environment files
+.vscode/
+__pycache__/
+*.pyc
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
